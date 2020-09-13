@@ -36,7 +36,8 @@ public class Main {
         persons.stream().forEach(p -> System.out.println(p));
 
         // Solution 2 (параметр определяется по persons)
-        persons.stream().forEach(System.out::println);
+        // persons.stream().forEach(System.out::println); // можно сократить до
+        persons.forEach(System.out::println);
 
         System.out.println("");
 
@@ -67,7 +68,7 @@ public class Main {
         // Solution 5 (получим средний возраст)
         double average = persons.stream().
                 filter(p -> p.getAge() > 20).
-                mapToInt(p -> p.getAge()).average().getAsDouble();
+                mapToInt(Person::getAge).average().getAsDouble();
         System.out.println(average);
     }
 
