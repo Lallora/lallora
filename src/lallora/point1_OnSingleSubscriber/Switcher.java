@@ -1,9 +1,9 @@
-package lallora;
+package lallora.point1_OnSingleSubscriber;
 
 public class Switcher {
 
     // ссылка на любой объект с этим интерфейсом
-    public IElectricityConsumer consumer;
+    public FIElectricityConsumer consumer;
 
     void switchOn() {
         System.out.println("Выключатель включён");
@@ -12,4 +12,5 @@ public class Switcher {
             consumer.electricityOn();
         }
     }
+
 }
